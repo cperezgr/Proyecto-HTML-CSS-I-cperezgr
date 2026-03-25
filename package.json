@@ -1,0 +1,24 @@
+{
+  "name": "plantilla-uoc",
+  "version": "1.0.0",
+  "description": "Plantilla inicial para las PEC de HTML y CSS I",
+  "scripts": {
+    "parcel:dev": "parcel index.html",
+    "parcel:build": "parcel build index.html",
+    "clean": "rimraf dist .parcel-cache",
+    "start": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean parcel:build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0",
+    "posthtml-include": "^2.0.1",
+    "rimraf": "^6.0.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

@@ -1,2 +1,2 @@
-# Proyecto-HTML-CSS-I-cperezgr
-Repositorio para versionar mi proyecto web de la asignatura HTML y CSS I
+# Plantilla-HTML-Y-CSS-I
+Plantilla para los proyectos de HTML Y CSS I
