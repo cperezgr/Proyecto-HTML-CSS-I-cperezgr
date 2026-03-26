@@ -1,2 +1,1 @@
-const name = 'world';
-console.log(`Hello ${name}`);
+console.log('Portal de gastronomía cargado correctamente');

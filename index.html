@@ -1,17 +1,50 @@
 <!doctype html>
-<html lang="ca">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plantilla UOC</title>
+    <title>Sabores del Mediterráneo | Inicio</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
     <include src="./src/partials/header.html"></include>
 
-    <main>
-      <h1>Hello UOC</h1>
+    <main id="main-content" class="page-content">
+      <section class="hero">
+        <h1>Sabores del Mediterráneo</h1>
+        <p>Un pequeño portal dedicado a descubrir platos, ingredientes y tradiciones de la gastronomía mediterránea.</p>
+        <a class="button-link" href="./src/categoria.html">Explorar la categoría</a>
+      </section>
+
+      <section class="intro">
+        <h2>¿Qué encontrarás en esta web?</h2>
+        <p>
+          En este portal podrás consultar una selección de platos representativos, conocer mejor su origen y acceder a
+          páginas de detalle con información ampliada.
+        </p>
+      </section>
+
+      <section class="highlights">
+        <article class="card">
+          <h3>Recetas tradicionales</h3>
+          <p>Platos vinculados a la cultura, el territorio y los productos locales.</p>
+        </article>
+
+        <article class="card">
+          <h3>Ingredientes frescos</h3>
+          <p>Aceite de oliva, verduras, arroz, pescado y otros productos esenciales.</p>
+        </article>
+
+        <article class="card">
+          <h3>Más información</h3>
+          <p>Accede a páginas de detalle y a la sección de enlaces y fuentes.</p>
+        </article>
+      </section>
     </main>
+
+    <include src="./src/partials/footer.html"></include>
 
     <script type="module" src="./app.js"></script>
   </body>
