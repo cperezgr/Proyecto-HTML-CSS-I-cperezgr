@@ -102,7 +102,19 @@ img {
 }
 
 .hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
   padding: 2rem 0;
+}
+.hero-text p {
+  max-width: 60ch;
+}
+
+.hero-media img {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
 }
 
 .button-link {
@@ -133,6 +145,17 @@ img {
   margin-top: 2rem;
 }
 
+.intro {
+  margin-top: 2rem;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.35rem;
+  margin-bottom: 1rem;
+}
 .card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -185,6 +208,9 @@ a:focus {
 
   .image-row {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .hero {
+    grid-template-columns: 1.1fr 1fr;
   }
 }
 
