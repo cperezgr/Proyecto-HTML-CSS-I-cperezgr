@@ -2,8 +2,9 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sabores del Mediterráneo | Detalle 2</title>
+    <title>Sabores del Mediterráneo | Gazpacho andaluz</title>
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
@@ -12,47 +13,76 @@
     <include src="./src/partials/header.html"></include>
 
     <main id="main-content" class="page-content">
-      <article>
-        <h1>Gazpacho andaluz</h1>
+      <article class="detail-page">
+        <header class="detail-header" data-aos="fade-up">
+          <h1>Gazpacho andaluz</h1>
+          <p class="detail-intro">
+            El gazpacho andaluz es una receta tradicional muy apreciada por su frescura, su sencillez y el protagonismo
+            de productos vegetales propios de la cocina mediterránea.
+          </p>
+        </header>
 
-        <img
-          src="https://via.placeholder.com/900x450.png?text=Gazpacho+Andaluz"
-          alt="Imagen principal de un gazpacho andaluz"
-        />
-
-        <p>
-          El gazpacho andaluz es una preparación fría muy popular durante los meses calurosos y forma parte del
-          recetario tradicional del sur de España.
-        </p>
-        <p>
-          Sus ingredientes principales suelen ser tomate, pepino, pimiento, ajo, aceite de oliva, agua y pan, aunque
-          existen distintas variantes.
-        </p>
-        <p>
-          Se trata de una receta sencilla, refrescante y muy representativa de la cocina mediterránea por el
-          protagonismo de los productos frescos.
-        </p>
-
-        <section class="image-row">
+        <figure class="detail-hero" data-aos="fade-up">
           <img
-            src="https://via.placeholder.com/300x200.png?text=Gazpacho+1"
-            alt="Ingredientes frescos para preparar gazpacho"
+            src="./assets/images/gazpacho-det-principal.jpg"
+            alt="Cuenco de gazpacho andaluz acompañado de verduras frescas"
           />
-          <img
-            src="https://via.placeholder.com/300x200.png?text=Gazpacho+2"
-            alt="Proceso de elaboración del gazpacho"
-          />
-          <img src="https://via.placeholder.com/300x200.png?text=Gazpacho+3" alt="Cuenco servido de gazpacho andaluz" />
+          <figcaption>Gazpacho andaluz servido con ingredientes frescos.</figcaption>
+        </figure>
+
+        <section class="detail-text" data-aos="fade-up">
+          <h2>Una receta vinculada al verano</h2>
+          <p>
+            El gazpacho es una preparación fría que forma parte del recetario tradicional andaluz y que se consume
+            especialmente durante los meses de calor. Su textura ligera y su sabor refrescante han contribuido a
+            convertirlo en una de las recetas más populares de la cocina española.
+          </p>
+
+          <p>
+            Sus ingredientes principales suelen ser tomate, pepino, pimiento, ajo, aceite de oliva, agua y pan, aunque
+            pueden encontrarse distintas variantes según la zona o las preferencias de cada casa. La calidad del
+            producto fresco influye mucho en el resultado final, algo muy característico de la gastronomía mediterránea.
+          </p>
+
+          <p>
+            Más allá de ser una receta sencilla, el gazpacho representa una forma de aprovechar ingredientes cotidianos
+            para obtener un plato nutritivo y adecuado para climas cálidos. Por eso sigue siendo una elaboración
+            presente tanto en el ámbito doméstico como en la restauración.
+          </p>
         </section>
 
-        <section>
-          <h2>Vídeo relacionado</h2>
+        <section class="detail-gallery" data-aos="fade-up" aria-labelledby="galeria-gazpacho">
+          <h2 id="galeria-gazpacho">Galería de imágenes</h2>
+          <div class="image-row">
+            <figure>
+              <img
+                src="./assets/images/gazpacho-det-1.jpg"
+                alt="Tomates, pepino y pimiento usados para preparar gazpacho"
+              />
+              <figcaption>Ingredientes frescos utilizados en la receta.</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="./assets/images/gazpacho-det-2.jpg"
+                alt="Proceso de triturado de verduras para elaborar gazpacho"
+              />
+              <figcaption>Preparación del gazpacho antes del servido.</figcaption>
+            </figure>
+
+            <figure>
+              <img src="./assets/images/gazpacho-det-3.jpg" alt="Gazpacho servido en un cuenco con trozos de verdura" />
+              <figcaption>Presentación del plato listo para consumir.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="detail-video" data-aos="fade-up" aria-labelledby="video-gazpacho">
+          <h2 id="video-gazpacho">Vídeo relacionado</h2>
           <div class="video-wrapper">
             <iframe
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/DCU5lM2H5WM"
-              title="Vídeo sobre el gazpacho andaluz en YouTube"
+              title="Vídeo de YouTube sobre la preparación del gazpacho andaluz"
               allow="
                 accelerometer;
                 autoplay;
@@ -66,6 +96,10 @@
             ></iframe>
           </div>
         </section>
+
+        <p class="detail-back">
+          <a href="./categoria.html">Volver a la categoría de platos destacados</a>
+        </p>
       </article>
     </main>
 

@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sabores del Mediterráneo | Categoría</title>
     <link rel="stylesheet" href="../styles.css" />
@@ -20,9 +21,18 @@
           España.
         </p>
       </section>
-
+      <section class="filters" aria-labelledby="filtros-categoria">
+        <h2 id="filtros-categoria">Filtrar platos</h2>
+        <div class="filter-buttons">
+          <button class="filter-button is-active" type="button" data-filter="all">Todos</button>
+          <button class="filter-button" type="button" data-filter="arroz">Arroces</button>
+          <button class="filter-button" type="button" data-filter="sopa">Sopas frías</button>
+          <button class="filter-button" type="button" data-filter="verdura">Verduras</button>
+          <button class="filter-button" type="button" data-filter="marinero">Marineros</button>
+        </div>
+      </section>
       <section class="card-grid">
-        <article class="card">
+        <article class="card" data-category="arroz" data-aos="fade-up">
           <img src="./assets/images/paella_categoria.jpg" alt="Imagen representativa de una paella valenciana" />
           <h2>Paella valenciana</h2>
           <p>
@@ -32,7 +42,7 @@
           <a href="./det1.html">Ver detalle de la paella valenciana</a>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="sopa" data-aos="fade-up">
           <img src="./assets/images/gazpacho_categoria.jpg" alt="Imagen representativa de un gazpacho andaluz" />
           <h2>Gazpacho andaluz</h2>
           <p>
@@ -42,7 +52,7 @@
           <a href="./det2.html">Ver detalle del gazpacho andaluz</a>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="verdura" data-aos="fade-up">
           <img src="./assets/images/escalivada_categoria.jpg" alt="Imagen representativa de una escalivada" />
           <h2>Escalivada</h2>
           <p>
@@ -52,7 +62,7 @@
           <span class="text-note">Página de detalle no disponible todavía</span>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="marinero" data-aos="fade-up">
           <img src="./assets/images/fideua_categoria.jpg" alt="Imagen representativa de una fideuà" />
           <h2>Fideuà</h2>
           <p>

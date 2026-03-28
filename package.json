@@ -23,5 +23,8 @@
     "last 2 versions",
     "Firefox ESR",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
 }
