@@ -18,6 +18,24 @@ if (navToggle && navMenu) {
   });
 }
 
+const submenuToggles = document.querySelectorAll('.submenu-toggle');
+
+if (submenuToggles.length) {
+  submenuToggles.forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      const submenuId = toggle.getAttribute('aria-controls');
+      const submenu = submenuId ? document.getElementById(submenuId) : null;
+
+      toggle.setAttribute('aria-expanded', String(!expanded));
+
+      if (submenu) {
+        submenu.classList.toggle('submenu--open');
+      }
+    });
+  });
+}
+
 const filterButtons = document.querySelectorAll('[data-filter]');
 const filterItems = document.querySelectorAll('[data-category]');
 

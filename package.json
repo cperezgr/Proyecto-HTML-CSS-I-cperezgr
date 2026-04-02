@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Proyecto HTML y CSS I",
   "scripts": {
-    "parcel:dev": "parcel index.html ./src/categoria.html ./src/det1.html ./src/det2.html ./src/links.html",
-    "parcel:build": "parcel build index.html ./src/categoria.html ./src/det1.html ./src/det2.html ./src/links.html --public-url /",
+    "parcel:dev": "parcel index.html ./src/destacado.html ./src/paella.html ./src/gazpacho.html ./src/links.html",
+    "parcel:build": "parcel build index.html ./src/destacado.html ./src/paella.html ./src/gazpacho.html ./src/links.html --public-url /",
     "clean": "rimraf dist .parcel-cache",
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build"
