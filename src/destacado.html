@@ -34,11 +34,36 @@
       <section class="card-grid">
         <article class="card" data-category="arroz" data-aos="fade-up">
           <!--img src="./assets/images/paella_destacado.jpg" alt="Imagen representativa de una paella valenciana" /-->
-          <picture>
+          <!--picture>
             <source srcset="./assets/images/paella_destacado.jpg?as=avif" type="image/avif" />
             <source srcset="./assets/images/paella_destacado.jpg?as=webp" type="image/webp" />
             <img src="./assets/images/paella_destacado.jpg" alt="Imagen representativa de una paella valenciana" />
-          </picture>
+          </picture-->
+          <!--1.	Resolution switching por tamaño-->
+          <!--picture>
+            <source srcset="./assets/images/paella_destacado.jpg?width=400&as=avif" type="image/avif" />
+            <source srcset="./assets/images/paella_destacado.jpg?width=400&as=webp" type="image/webp" />
+            <img
+              src="./assets/images/paella_destacado.jpg?width=400"
+              srcset="
+                ./assets/images/paella_destacado.jpg?width=400   400w,
+                ./assets/images/paella_destacado.jpg?width=800   800w,
+                ./assets/images/paella_destacado.jpg?width=1200 1200w
+              "
+              sizes="(max-width: 600px) 100vw, 50vw"
+              alt="Imagen representativa de una paella valenciana"
+            />
+          <picture-->
+          <img
+            src="./assets/images/paella_destacado.jpg?width=400"
+            srcset="
+              ./assets/images/paella_destacado.jpg?width=400   400w,
+              ./assets/images/paella_destacado.jpg?width=800   800w,
+              ./assets/images/paella_destacado.jpg?width=1200 1200w
+            "
+            sizes="(max-width: 600px) 100vw, 50vw"
+            alt="Imagen representativa de una paella valenciana"
+          />
           <h2>Paella valenciana</h2>
           <p>
             Plato emblemático elaborado a base de arroz y asociado a la tradición culinaria valenciana. Es una de las
