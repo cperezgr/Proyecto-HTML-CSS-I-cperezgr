@@ -1,0 +1,494 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #fffaf3;
+  --color-surface: #ffffff;
+  --color-text: #1f1f1f;
+  --color-border: #d9d2c8;
+  --color-soft: #f4ede3;
+  --max-width: 1100px;
+  --color-primary: #267e1b;
+  --color-primary-dark: #0a4402;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.site-header,
+.site-footer {
+  background-color: var(--color-soft);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  border-bottom: none;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.main-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.site-logo {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-toggle {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background-color: var(--color-primary-dark);
+}
+
+.nav-list {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem 0 0;
+  margin: 0;
+}
+
+.nav-list.nav-list--open {
+  display: flex;
+}
+
+.nav-list a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Menú principal y botón Detalles con el mismo padding visual */
+.nav-list a,
+.submenu-toggle {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.35rem;
+  transition:
+    box-shadow 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Quitar subrayado y usar borde verde en hover/focus */
+.nav-list a:hover,
+.nav-list a:focus,
+.submenu-toggle:hover,
+.submenu-toggle:focus {
+  text-decoration: none;
+  box-shadow: 0 0 0 3px rgba(38, 126, 27, 0.6);
+}
+
+/* Evita que enlaces generales cambien a otro verde al hover en el menú */
+.nav-list a:hover,
+.nav-list a:focus,
+.submenu-toggle:hover,
+.submenu-toggle:focus {
+  color: var(--color-text);
+}
+
+.has-submenu {
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.submenu-toggle {
+  background: none;
+  border: 0;
+  font: inherit;
+  color: var(--color-text);
+  cursor: pointer;
+  line-height: 1.6;
+}
+
+/* importante: sin subrayado aquí */
+.submenu-toggle:hover,
+.submenu-toggle:focus {
+  text-decoration: none;
+}
+
+.submenu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0;
+  background-color: var(--color-soft);
+  border-radius: 0.35rem;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.submenu li a {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  color: var(--color-text);
+  white-space: nowrap;
+  border-radius: 0.35rem;
+}
+
+.submenu li a:hover,
+.submenu li a:focus {
+  background-color: var(--color-soft);
+}
+
+.page-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.hero-text p {
+  max-width: 60ch;
+}
+
+.hero-media img {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.button-link {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
+.button-link:hover,
+.button-link:focus {
+  background-color: var(--color-primary-dark);
+}
+
+.highlights,
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.image-row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Cada imagen ocupa el mismo espacio */
+.image-row figure {
+  flex: 1;
+  margin: 0;
+}
+
+/* Imágenes con mismo tamaño */
+.image-row img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-grid,
+.highlights {
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+
+.intro {
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.text-note {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.image-row {
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detail-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.detail-header {
+  margin-bottom: 1.5rem;
+}
+
+.detail-intro {
+  font-size: 1.1rem;
+}
+
+.detail-hero {
+  margin: 0 0 2rem;
+}
+
+.detail-hero img {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.detail-hero figcaption,
+.detail-gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.detail-text {
+  margin-bottom: 2rem;
+}
+
+.detail-gallery {
+  margin-bottom: 2rem;
+}
+
+.detail-gallery figure {
+  margin: 0;
+}
+
+.detail-video {
+  margin-bottom: 2rem;
+}
+
+.detail-back {
+  margin-top: 2rem;
+}
+
+.filters {
+  margin: 2rem 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.filter-button {
+  background-color: #fff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  border-color: var(--color-primary);
+}
+
+.filter-button.is-active {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary-dark);
+}
+
+.filter-button:focus,
+.nav-toggle:focus,
+.button-link:focus,
+a:focus,
+.submenu-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 126, 27, 0.6);
+  border-radius: 0.35rem;
+}
+
+/*Bloque móvil*/
+@media (max-width: 767px) {
+  .has-submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .submenu-toggle {
+    align-self: flex-start;
+  }
+
+  .nav-list .submenu {
+    display: none;
+    position: static;
+    border: 0;
+    background: var(--color-soft);
+    padding: 0.35rem 0 0 0.6rem;
+    margin-top: 0.25rem;
+    width: fit-content;
+    min-width: 0;
+  }
+
+  .nav-list .submenu.submenu--open {
+    display: inline-block;
+  }
+
+  .submenu li {
+    width: auto;
+  }
+
+  .submenu li a {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.35rem 0.6rem;
+    white-space: nowrap;
+  }
+  .image-row {
+    flex-direction: column;
+  }
+}
+
+/*bloque escritorio*/
+@media (min-width: 768px) {
+  .card-grid,
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .has-submenu:hover .submenu,
+  .has-submenu:focus-within .submenu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: max-content;
+    z-index: 1000;
+  }
+}
+
+@media (min-width: 1024px) {
+  .highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

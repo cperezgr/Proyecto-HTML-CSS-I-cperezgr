@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <include src="./src/partials/header.html"></include>
+
     <main id="main-content" class="page-content">
       <section class="hero">
         <div class="hero-text" data-aos="fade-right">
@@ -21,10 +25,15 @@
         </div>
 
         <div class="hero-media" data-aos="fade-left">
-          <img
-            src="./src/assets/images/hero_gastronomia mediterranea.jpg"
-            alt="Mesa con varios platos representativos de la gastronomía mediterránea"
-          />
+          <!--img
+            src="./src/assets/images/hero_gastronomia_mediterranea.jpg"
+            alt=""
+          /-->
+          <picture>
+            <source srcset="src/assets/images/hero_gastronomia_mediterranea.jpg?as=avif" type="image/avif" />
+            <source srcset="src/assets/images/hero_gastronomia_mediterranea.jpg?as=webp" type="image/webp" />
+            <img src="src/assets/images/hero_gastronomia_mediterranea.jpg" alt="Gastronomía mediterránea" />
+          </picture>
         </div>
       </section>
 
