@@ -492,3 +492,14 @@ a:focus,
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.clipped-image img {
+  width: 100%;
+  height: auto;
+  clip-path: circle(52% at center);
+  transition: clip-path 0.5s ease-in-out; /* Suaviza la transición */
+}
+
+.clipped-image:hover img {
+  clip-path: circle(61% at center); /* Crea una forma circular al hacer hover */
+}
