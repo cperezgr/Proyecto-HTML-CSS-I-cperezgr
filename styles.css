@@ -514,3 +514,37 @@ a:focus,
     scroll-behavior: auto !important;
   }
 }
+
+.grad-stop-1 {
+  stop-color: green;
+  animation: color1 3s ease-in-out infinite alternate;
+}
+
+.grad-stop-2 {
+  stop-color: yellow;
+  animation: color2 3s ease-in-out infinite alternate;
+}
+
+@keyframes color1 {
+  0% {
+    stop-color: green;
+  }
+  50% {
+    stop-color: lightgreen;
+  }
+  100% {
+    stop-color: yellow;
+  }
+}
+
+@keyframes color2 {
+  0% {
+    stop-color: yellow;
+  }
+  50% {
+    stop-color: lightgreen;
+  }
+  100% {
+    stop-color: green;
+  }
+}
