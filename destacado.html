@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="description" content="Productos destacados." />
     <link rel="icon" href="./favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sabores del Mediterráneo | Destacado</title>
@@ -33,23 +33,15 @@
       </section>
       <section class="card-grid">
         <article class="card" data-category="arroz" data-aos="fade-up">
-          <!--img src="./src/assets/images/paella_destacado.jpg" alt="Imagen representativa de una paella valenciana" /-->
-          <!--picture>
-            <source srcset="./src/assets/images/paella_destacado.jpg?as=avif" type="image/avif" />
-            <source srcset="./src/assets/images/paella_destacado.jpg?as=webp" type="image/webp" />
-            <img src="./src/assets/images/paella_destacado.jpg" alt="Imagen representativa de una paella valenciana" />
-          </picture-->
-          <img
-            src="./src/assets/images/paella_destacado.jpg?width=400"
-            srcset="
-              ./src/assets/images/paella_destacado.jpg?width=400   400w,
-              ./src/assets/images/paella_destacado.jpg?width=800   800w,
-              ./src/assets/images/paella_destacado.jpg?width=1200 1200w
-            "
-            sizes="(max-width: 600px) 100vw, 50vw"
-            alt="Imagen representativa de una paella valenciana"
-          />
-
+          <picture>
+            <source srcset="./src/assets/images/paella_destacado.webp" type="image/webp" />
+            <img
+              src="./src/assets/images/paella_destacado.jpg"
+              alt="Imagen representativa de una paella valenciana"
+              width="1024"
+              height="600"
+            />
+          </picture>
           <h2>Paella valenciana</h2>
           <p>
             Plato emblemático elaborado a base de arroz y asociado a la tradición culinaria valenciana. Es una de las
@@ -59,11 +51,15 @@
         </article>
 
         <article class="card" data-category="sopa" data-aos="fade-up">
-          <!--img src="./src/assets/images/gazpacho_destacado.jpg" alt="Imagen representativa de un gazpacho andaluz" /-->
           <picture>
             <source srcset="./src/assets/images/gazpacho_destacado.jpg?as=avif" type="image/avif" />
             <source srcset="./src/assets/images/gazpacho_destacado.jpg?as=webp" type="image/webp" />
-            <img src="./src/assets/images/gazpacho_destacado.jpg" alt="Imagen representativa de un gazpacho andaluz" />
+            <img
+              src="./src/assets/images/gazpacho_destacado.jpg"
+              alt="Imagen representativa de un gazpacho andaluz"
+              width="1024"
+              height="600"
+            />
           </picture>
           <h2>Gazpacho andaluz</h2>
           <p>
@@ -74,14 +70,18 @@
         </article>
 
         <article class="card" data-category="verdura" data-aos="fade-up">
-          <!--img src="./src/assets/images/escalivada_destacado.jpg" alt="Imagen representativa de una escalivada" /-->
           <picture>
-            <source srcset="./src/assets/images/escalivada_destacado.jpg?as=avif" type="image/avif" />
-            <source srcset="./src/assets/images/escalivada_destacado.jpg?as=webp" type="image/webp" />
+            <source srcset="./src/assets/images/escalivada_destacado.webp" type="image/webp" />
             <img
               src="./src/assets/images/escalivada_destacado.jpg"
+              srcset="
+                ./src/assets/images/escalivada_destacado.jpg       1x,
+                ./src/assets/images/escalivada_destacado.jpg?dpr=2 2x
+              "
               alt="Imagen representativa de una escalivada"
               loading="lazy"
+              width="1024"
+              height="600"
             />
           </picture>
           <h2>Escalivada</h2>
@@ -93,19 +93,17 @@
         </article>
 
         <article class="card" data-category="marinero" data-aos="fade-up">
-          <!--img src="./src/assets/images/fideua_destacado.jpg" alt="Imagen representativa de una fideuà" /-->
-          <!--picture>
-            <source srcset="./src/assets/images/fideua_destacado.jpg?as=avif" type="image/avif" />
-            <source srcset="./src/assets/images/fideua_destacado.jpg?as=webp" type="image/webp" />
-            <img src="./src/assets/images/fideua_destacado.jpg" alt="Imagen representativa de una fideuà" />
-          </picture-->
-          <img
-            src="./src/assets/images/fideua_destacado.jpg"
-            srcset="./src/assets/images/fideua_destacado.jpg 1x, ./src/assets/images/fideua_destacado.jpg?dpr=2 2x"
-            alt="Imagen representativa de una fideuà"
-            loading="lazy"
-          />
-
+          <picture>
+            <source srcset="./src/assets/images/fideua_destacado.webp" type="image/webp" />
+            <img
+              src="./src/assets/images/fideua_destacado.jpg"
+              srcset="./src/assets/images/fideua_destacado.jpg 1x, ./src/assets/images/fideua_destacado.jpg?dpr=2 2x"
+              alt="Imagen representativa de una fideuà"
+              loading="lazy"
+              width="1024"
+              height="600"
+            />
+          </picture>
           <h2>Fideuà</h2>
           <p>
             Receta marinera elaborada con fideos y caldo de pescado, muy apreciada en zonas costeras del Mediterráneo.
